@@ -1,142 +1,49 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>テスト</title>
-<meta name="description" content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<style>
-/*==================================================
-スライダーのためのcss
-===================================*/
-.slider {
-    width: 94%;
-    margin: 0 auto;
-}
-
-.slider img {
-    width: 100%;
-    height: auto;
-}
-
-.slider .slick-slide {
-    margin: 0 10px;
-}
-
-.slick-prev,
-.slick-next {
-    position: absolute;
-    top: 42%;
-    cursor: pointer;
-    outline: none;
-    border-top: 2px solid #666;
-    border-right: 2px solid #666;
-    height: 15px;
-    width: 15px;
-}
-
-.slick-prev {
-    left: -1.5%;
-    transform: rotate(-135deg);
-}
-
-.slick-next {
-    right: -1.5%;
-    transform: rotate(45deg);
-}
-
-.slick-dots {
-    text-align: center;
-    margin: 20px 0 0 0;
-}
-
-.slick-dots li {
-    display: inline-block;
-    margin: 0 5px;
-}
-
-.slick-dots button {
-    color: transparent;
-    outline: none;
-    width: 8px;
-    height: 8px;
-    display: block;
-    border-radius: 50%;
-    background: #ccc;
-}
-
-.slick-dots .slick-active button {
-    background: #333;
-}
-
-/*========= レイアウトのためのCSS ===============*/
-
-body {
-    background: #eee;
-}
-
-h2,
-p {
-    text-align: center;
-    padding: 20px;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-a {
-    color: #333;
-}
-
-a:hover,
-a:active {
-    text-decoration: none;
-}
-</style>
-<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/css/6-1-6.css">
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <link rel="stylesheet" href="style.css">
+  <title>slick カルーセル</title>
 </head>
 <body>
-<h2>テスト</h2>
-<ul class="slider">
-  <li><a href="https://www.google.co.jp/"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_01.jpg" alt=""></li>
-  <li><a href="https://done-school.com/"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_02.jpg" alt=""></li>
-  <li><a href="https://www.google.co.jp/"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_03.jpg" alt=""></li>
-</ul>
-<p>使用したライブラリ：<a href="https://kenwheeler.github.io/slick/" target="_blank">https://kenwheeler.github.io/slick/</a></p>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/js/6-1-6.js"></script>
-<script>
-$('.slider').slick({
-    autoplay: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    prevArrow: '<div class="slick-prev"></div>',
-    nextArrow: '<div class="slick-next"></div>',
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        }
-      },
-      {
-        breakpoint: 426,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      }
-    ]
-});
-</script>
+
+  <div class="section"> 
+    <div class="sliderArea">
+      <div class="slider_thumb slider">
+        <div><a href="https://sites.google.com/youmemiru.co.jp/doneleague/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F"  target="_blank" rel="noopener noreferrer"><img src="image/01.png" alt="01"></a></div>
+        <div><a href="https://sites.google.com/youmemiru.co.jp/doneleague/%E7%B5%90%E6%9E%9C%E7%99%BA%E8%A1%A8" target="_blank" rel="noopener noreferrer"><img src="image/02.png" alt="02"></a></div>
+        <div><a href="https://sites.google.com/youmemiru.co.jp/doneleague/%E3%83%AD%E3%83%9C%E3%83%B4%E3%82%A3%E3%83%A9%E3%83%B3%E3%81%A8%E3%81%AF" target="_blank" rel="noopener noreferrer"><img src="image/03.png" alt="03"></a></div>
+        <div><a href="https://sites.google.com/youmemiru.co.jp/doneleague/%E3%83%94%E3%83%B3%E3%83%9D%E3%83%B3%E3%82%AD%E3%83%A3%E3%83%AA%E3%83%BC%E7%AB%B6%E6%8A%80" target="_blank" rel="noopener noreferrer">
+<img src="image/04.png" alt="04"></a></div>
+        <div><a href="https://sites.google.com/youmemiru.co.jp/doneleague/%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9%E7%AB%B6%E6%8A%80" target="_blank" rel="noopener noreferrer"><img src="image/05.png" alt="05"></a></div>
+      </div>
+      <div class="thumb">
+        <div><img src="image/01.png" alt="01"></div>
+        <div><img src="image/02.png" alt="02"></div>
+        <div><img src="image/03.png" alt="03"></div>
+        <div><img src="image/04.png" alt="04"></div>
+        <div><img src="image/05.png" alt="05"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
+  <script src="slick/slick.min.js"></script>
+  <script>
+  $(document).on('ready', function() {
+    $('.slider_thumb').slick({
+        autoplay: true,//オートプレイ
+        arrows:false, // スライドの左右の矢印ボタン
+        asNavFor:'.thumb' // スライダを他のスライダのナビゲーションに設定する
+    });
+    $('.thumb').slick({
+        asNavFor:'.slider_thumb', // スライダを他のスライダのナビゲーションに設定する（class名またはID名）
+        focusOnSelect: true, // クリックでのスライド切り替えを有効にするか
+        slidesToShow:4, // 表示するスライド数を設定
+        slidesToScroll:1 // スクロールするスライド数を設定
+    });  
+  });
+  </script>
 </body>
-</html>
