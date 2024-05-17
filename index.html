@@ -1,10 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>Webサイトをつくってみよう</title>
+<meta charset="utf-8">
+<title>テスト</title>
+<meta name="description" content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+    width: 94%;
+    margin: 0 auto;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+.slider .slick-slide {
+    margin: 0 10px;
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 42%;
+    cursor: pointer;
+    outline: none;
+    border-top: 2px solid #666;
+    border-right: 2px solid #666;
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+.slick-dots {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 8px;
+    height: 8px;
+    display: block;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.slick-dots .slick-active button {
+    background: #333;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+body {
+    background: #eee;
+}
+
+h2,
+p {
+    text-align: center;
+    padding: 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #333;
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/css/6-1-6.css">
 </head>
 <body>
-Hello world!
+<h2>テスト</h2>
+<ul class="slider">
+  <li><a href="https://www.google.co.jp/"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_01.jpg" alt=""></li>
+  <li><a href="https://done-school.com/"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_02.jpg" alt=""></li>
+  <li><a href="https://www.google.co.jp/"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/img/img_03.jpg" alt=""></li>
+</ul>
+<p>使用したライブラリ：<a href="https://kenwheeler.github.io/slick/" target="_blank">https://kenwheeler.github.io/slick/</a></p>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-6/js/6-1-6.js"></script>
+<script>
+$('.slider').slick({
+    autoplay: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow: '<div class="slick-prev"></div>',
+    nextArrow: '<div class="slick-next"></div>',
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 426,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
+});
+</script>
 </body>
 </html>
